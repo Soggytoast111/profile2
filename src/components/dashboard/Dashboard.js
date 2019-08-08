@@ -9,30 +9,16 @@ import List from '@material-ui/core/List';
 import Typography from '@material-ui/core/Typography';
 import Divider from '@material-ui/core/Divider';
 import IconButton from '@material-ui/core/IconButton';
-import Badge from '@material-ui/core/Badge';
-import Container from '@material-ui/core/Container';
-import Grid from '@material-ui/core/Grid';
-import Paper from '@material-ui/core/Paper';
-import Link from '@material-ui/core/Link';
 import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
-import NotificationsIcon from '@material-ui/icons/Notifications';
-import { mainListItems, secondaryListItems } from './listItems';
-import Chart from './Chart';
-import Deposits from './Deposits';
-import Orders from './Orders';
-
-function MadeWithLove() {
-  return (
-    <Typography variant="body2" color="textSecondary" align="center">
-      {'Built with love by the '}
-      <Link color="inherit" href="https://material-ui.com/">
-        Material-UI
-      </Link>
-      {' team.'}
-    </Typography>
-  );
-}
+import ListItem from '@material-ui/core/ListItem';
+import ListItemIcon from '@material-ui/core/ListItemIcon';
+import ListItemText from '@material-ui/core/ListItemText';
+import AssignmentIcon from '@material-ui/icons/Assignment';
+import { BrowserRouter as Router, Route, Switch, Link, NavLink, Redirect} from "react-router-dom";
+import Page1 from './pages/page1.js'
+import Page2 from './pages/page2.js'
+import Page3 from './pages/page3.js'
 
 const drawerWidth = 240;
 
@@ -108,16 +94,22 @@ const useStyles = makeStyles(theme => ({
     padding: theme.spacing(2),
     display: 'flex',
     overflow: 'auto',
-    flexDirection: 'column',
+    flexDirection: 'column'
   },
   fixedHeight: {
     height: 240,
   },
 }));
 
-export default function Dashboard() {
+const handleClick = (e) => {
+  console.log(e.currentTarget.id)
+  //ReactDOM.render(<Link to='/'/>, document.body)
+  //createHistory({forceRefresh:true}).push('/page3')
+}
+
+function Dashboard() {
   const classes = useStyles();
-  const [open, setOpen] = React.useState(true);
+  const [open, setOpen] = React.useState(false);
   const handleDrawerOpen = () => {
     setOpen(true);
   };
@@ -140,18 +132,16 @@ export default function Dashboard() {
           >
             <MenuIcon />
           </IconButton>
-          <Typography component="h1" variant="h6" color="inherit" noWrap className={classes.title}>
+          <Typography align="right" component="h1" variant="h6" color="inherit" noWrap className={classes.title}>
             Jonathan Curto
+            <Typography style={{ fontSize: '10px' }} align="right" component="h6" variant="body2" color="inherit" noWrap className={classes.title}>
+            (609) 558-5339   |   joncurto@gmail.com
           </Typography>
-          <IconButton color="inherit">
-            <Badge badgeContent={4} color="secondary">
-              <NotificationsIcon />
-            </Badge>
-          </IconButton>
+          </Typography>
         </Toolbar>
       </AppBar>
       <Drawer
-        variant="permanent"
+        variant="temporary"
         classes={{
           paper: clsx(classes.drawerPaper, !open && classes.drawerPaperClose),
         }}
@@ -163,36 +153,52 @@ export default function Dashboard() {
           </IconButton>
         </div>
         <Divider />
-        <List>{mainListItems}</List>
+        <List>
+          <div>
+            <ListItem component='div'>
+              <div><img src='assets/img/me.jpg' height='195' width='175'></img></div>
+            </ListItem>
+          </div>
+        </List>
         <Divider />
-        <List>{secondaryListItems}</List>
+        <List>
+        <div>
+          <ListItem id="homeButton" button>
+            <ListItemIcon>
+              <AssignmentIcon />
+            </ListItemIcon>
+            <ListItemText primary="Home" />
+          </ListItem>
+          <ListItem id="projectsButton" onClick={handleClick} button>
+            <ListItemIcon>
+              <AssignmentIcon />
+            </ListItemIcon>
+            <ListItemText primary="Projects" />
+          </ListItem>
+          <ListItem id="exercisesButton" onClick={handleClick} button>
+            <ListItemIcon>
+              <AssignmentIcon />
+            </ListItemIcon>
+            <ListItemText primary="Exercises/Doodles" />
+          </ListItem>
+          <ListItem id="contactButton" onClick={handleClick} button>
+            <ListItemIcon>
+              <AssignmentIcon />
+            </ListItemIcon>
+            <ListItemText primary="Contact Info" />
+          </ListItem>
+        </div>
+        </List>
       </Drawer>
-      <main className={classes.content}>
-        <div className={classes.appBarSpacer} />
-        <Container maxWidth="lg" className={classes.container}>
-          <Grid container spacing={3}>
-            {/* Chart */}
-            <Grid item xs={12} md={8} lg={9}>
-              <Paper className={fixedHeightPaper}>
-                <Chart />
-              </Paper>
-            </Grid>
-            {/* Recent Deposits */}
-            <Grid item xs={12} md={4} lg={3}>
-              <Paper className={fixedHeightPaper}>
-                <Deposits />
-              </Paper>
-            </Grid>
-            {/* Recent Orders */}
-            <Grid item xs={12}>
-              <Paper className={classes.paper}>
-                <Orders />
-              </Paper>
-            </Grid>
-          </Grid>
-        </Container>
-        <MadeWithLove />
-      </main>
-    </div>
+      <Router>      
+        <Switch>
+          <Route exact path="/" component={Page1} />
+          <Route exact path="/page2" component={Page2} />
+          <Route exact path="/page3" component={Page3} />
+        </Switch>
+      </Router>
+    </div> 
   );
 }
+
+export default Dashboard
