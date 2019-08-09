@@ -12,13 +12,16 @@ import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ListItem from '@material-ui/core/ListItem';
+import Link from '@material-ui/core/Link'
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import AssignmentIcon from '@material-ui/icons/Assignment';
-import { BrowserRouter as Router, Route, Switch, Link, NavLink, Redirect} from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch, NavLink as RouterLink, Redirect} from "react-router-dom";
 import Page1 from './pages/page1.js'
 import Page2 from './pages/page2.js'
 import Page3 from './pages/page3.js'
+import Page4 from './pages/page4.js'
+import Page5 from './pages/page5.js'
 
 const drawerWidth = 240;
 
@@ -101,11 +104,7 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-const handleClick = (e) => {
-  console.log(e.currentTarget.id)
-  //ReactDOM.render(<Link to='/'/>, document.body)
-  //createHistory({forceRefresh:true}).push('/page3')
-}
+
 
 function Dashboard() {
   const classes = useStyles();
@@ -118,7 +117,13 @@ function Dashboard() {
   };
   const fixedHeightPaper = clsx(classes.paper, classes.fixedHeight);
 
+  const handleClick = (e) => {
+    console.log(e.currentTarget.id)
+    setOpen(false)
+  }
+
   return (
+  <Router>
     <div className={classes.root}>
       <CssBaseline />
       <AppBar position="absolute" className={clsx(classes.appBar, open && classes.appBarShift)}>
@@ -163,41 +168,49 @@ function Dashboard() {
         <Divider />
         <List>
         <div>
-          <ListItem id="homeButton" button>
+          <Link>
+          <ListItem id="homeButton" component={RouterLink} to='/' onClick={handleClick} button>
             <ListItemIcon>
               <AssignmentIcon />
             </ListItemIcon>
             <ListItemText primary="Home" />
           </ListItem>
-          <ListItem id="projectsButton" onClick={handleClick} button>
+          </Link>
+          <Link>
+          <ListItem id="projectsButton" component={RouterLink} to='/page2' onClick={handleClick} button>
             <ListItemIcon>
               <AssignmentIcon />
             </ListItemIcon>
             <ListItemText primary="Projects" />
           </ListItem>
-          <ListItem id="exercisesButton" onClick={handleClick} button>
+          </Link>
+          <Link>
+          <ListItem id="exercisesButton" component={RouterLink} to='/page3' onClick={handleClick} button>
             <ListItemIcon>
               <AssignmentIcon />
             </ListItemIcon>
             <ListItemText primary="Exercises/Doodles" />
           </ListItem>
-          <ListItem id="contactButton" onClick={handleClick} button>
+          </Link>
+          <Link>
+          <ListItem id="contactButton" component={RouterLink} to='/page4' onClick={handleClick} button>
             <ListItemIcon>
               <AssignmentIcon />
             </ListItemIcon>
             <ListItemText primary="Contact Info" />
           </ListItem>
+          </Link>
         </div>
         </List>
-      </Drawer>
-      <Router>      
+      </Drawer>   
         <Switch>
           <Route exact path="/" component={Page1} />
           <Route exact path="/page2" component={Page2} />
           <Route exact path="/page3" component={Page3} />
+          <Route exact path="/page4" component={Page4} />
         </Switch>
-      </Router>
     </div> 
+    </Router>
   );
 }
 
