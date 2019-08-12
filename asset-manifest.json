@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/profile2Deploy/static/css/main.b584192f.chunk.css",
-    "main.js": "/profile2Deploy/static/js/main.3998198b.chunk.js",
-    "main.js.map": "/profile2Deploy/static/js/main.3998198b.chunk.js.map",
-    "runtime~main.js": "/profile2Deploy/static/js/runtime~main.8bca5753.js",
-    "runtime~main.js.map": "/profile2Deploy/static/js/runtime~main.8bca5753.js.map",
-    "static/js/2.175f74e2.chunk.js": "/profile2Deploy/static/js/2.175f74e2.chunk.js",
-    "static/js/2.175f74e2.chunk.js.map": "/profile2Deploy/static/js/2.175f74e2.chunk.js.map",
-    "index.html": "/profile2Deploy/index.html",
-    "precache-manifest.eecb1d8d50336753ad27f8a815132044.js": "/profile2Deploy/precache-manifest.eecb1d8d50336753ad27f8a815132044.js",
-    "service-worker.js": "/profile2Deploy/service-worker.js",
-    "static/css/main.b584192f.chunk.css.map": "/profile2Deploy/static/css/main.b584192f.chunk.css.map",
-    "static/media/page3.css": "/profile2Deploy/static/media/tubtrivia.0e8563cf.gif",
-    "static/media/bg.jpg": "/profile2Deploy/static/media/bg.ebf82a0f.jpg",
-    "static/media/page2.css": "/profile2Deploy/static/media/trivia.7e554298.gif"
+    "main.css": "/profile2/static/css/main.f01007b2.chunk.css",
+    "main.js": "/profile2/static/js/main.da5dc9a1.chunk.js",
+    "main.js.map": "/profile2/static/js/main.da5dc9a1.chunk.js.map",
+    "runtime~main.js": "/profile2/static/js/runtime~main.413eaa4e.js",
+    "runtime~main.js.map": "/profile2/static/js/runtime~main.413eaa4e.js.map",
+    "static/js/2.175f74e2.chunk.js": "/profile2/static/js/2.175f74e2.chunk.js",
+    "static/js/2.175f74e2.chunk.js.map": "/profile2/static/js/2.175f74e2.chunk.js.map",
+    "index.html": "/profile2/index.html",
+    "precache-manifest.f19155ce260946ceb2abbdb641660592.js": "/profile2/precache-manifest.f19155ce260946ceb2abbdb641660592.js",
+    "service-worker.js": "/profile2/service-worker.js",
+    "static/css/main.f01007b2.chunk.css.map": "/profile2/static/css/main.f01007b2.chunk.css.map",
+    "static/media/page3.css": "/profile2/static/media/tubtrivia.0e8563cf.gif",
+    "static/media/bg.jpg": "/profile2/static/media/bg.ebf82a0f.jpg",
+    "static/media/page2.css": "/profile2/static/media/trivia.7e554298.gif"
   }
 }
