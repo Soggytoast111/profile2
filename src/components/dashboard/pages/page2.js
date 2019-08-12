@@ -162,7 +162,7 @@ function Page1() {
               <Grid container spacing={3}>
                 <Grid item sm={6} xs={12} md={4} lg={3}>
                 <Card className={classes.card}>
-                  <CardActionArea>
+                  <CardActionArea onClick={()=> window.location.assign('https://soggytoast111.github.io/WordGuessGame/')}>
                     <CardMedia
                       className={classes.sf}
                       title="Street Fighter Hangman"
@@ -177,19 +177,11 @@ function Page1() {
                       </Typography>
                     </CardContent>
                   </CardActionArea>
-                  <CardActions>
-                    <Button size="small" color="primary">
-                      Share
-                    </Button>
-                    <Button size="small" color="primary">
-                      Learn More
-                    </Button>
-                  </CardActions>
                 </Card>
                 </Grid>
                 <Grid item sm={6} xs={12} md={4} lg={3}>
                 <Card className={classes.card}>
-                  <CardActionArea>
+                  <CardActionArea onClick={()=> window.location.assign('https://soggytoast111.github.io/unit-4-game/')}>
                     <CardMedia
                       className={classes.rpg}
                       title="JQuery RPG"
@@ -204,19 +196,11 @@ function Page1() {
                       </Typography>
                     </CardContent>
                   </CardActionArea>
-                  <CardActions>
-                    <Button size="small" color="primary">
-                      Share
-                    </Button>
-                    <Button size="small" color="primary">
-                      Learn More
-                    </Button>
-                  </CardActions>
                 </Card>
                 </Grid>
                 <Grid item sm={6} xs={12} md={4} lg={3}>
                 <Card className={classes.card}>
-                  <CardActionArea>
+                  <CardActionArea onClick={()=> window.location.assign('https://soggytoast111.github.io/TriviaGame/')}>
                     <CardMedia
                       className={classes.trivia}
                       title="Lighthouse Trivia!"
@@ -231,19 +215,11 @@ function Page1() {
                       </Typography>
                     </CardContent>
                   </CardActionArea>
-                  <CardActions>
-                    <Button size="small" color="primary">
-                      Share
-                    </Button>
-                    <Button size="small" color="primary">
-                      Learn More
-                    </Button>
-                  </CardActions>
                 </Card>
                 </Grid>
                 <Grid item sm={6} xs={12} md={4} lg={3}>
                 <Card className={classes.card}>
-                  <CardActionArea>
+                  <CardActionArea onClick={()=> window.location.assign('https://project2g8.herokuapp.com/')}>
                     <CardMedia
                       className={classes.tubtrivia}
                       title="Totally Tubular Trivia!"
@@ -258,19 +234,11 @@ function Page1() {
                       </Typography>
                     </CardContent>
                   </CardActionArea>
-                  <CardActions>
-                    <Button size="small" color="primary">
-                      Share
-                    </Button>
-                    <Button size="small" color="primary">
-                      Learn More
-                    </Button>
-                  </CardActions>
                 </Card>
                 </Grid>
                 <Grid item sm={6} xs={12} md={4} lg={3}>
                 <Card className={classes.card}>
-                  <CardActionArea>
+                  <CardActionArea onClick={()=> window.location.assign('https://glacial-mesa-12581.herokuapp.com/')}>
                     <CardMedia
                       className={classes.reddit}
                       title="Reddit User History Scraper"
@@ -285,19 +253,11 @@ function Page1() {
                       </Typography>
                     </CardContent>
                   </CardActionArea>
-                  <CardActions>
-                    <Button size="small" color="primary">
-                      Share
-                    </Button>
-                    <Button size="small" color="primary">
-                      Learn More
-                    </Button>
-                  </CardActions>
                 </Card>
                 </Grid>
                 <Grid item sm={6} xs={12} md={4} lg={3}>
                 <Card className={classes.card}>
-                  <CardActionArea>
+                  <CardActionArea onClick={()=> window.location.assign('https://bach2basics.herokuapp.com/')}>
                     <CardMedia
                       className={classes.bach}
                       title="Bach to Basics"
@@ -312,14 +272,6 @@ function Page1() {
                       </Typography>
                     </CardContent>
                   </CardActionArea>
-                  <CardActions>
-                    <Button size="small" color="primary">
-                      Share
-                    </Button>
-                    <Button size="small" color="primary">
-                      Learn More
-                    </Button>
-                  </CardActions>
                 </Card>
                 </Grid>
                 </Grid>

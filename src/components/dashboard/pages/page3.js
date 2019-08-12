@@ -162,7 +162,7 @@ function Page1() {
               <Grid container spacing={3}>
                 <Grid item sm={6} xs={12} md={4} lg={3}>
                 <Card className={classes.card}>
-                  <CardActionArea>
+                  <CardActionArea onClick={()=> window.location.assign('https://soggytoast111.github.io/RPS-Multiplayer/')}>
                     <CardMedia
                       className={classes.rock}
                       title="Multiplayer RPS"
@@ -177,19 +177,11 @@ function Page1() {
                       </Typography>
                     </CardContent>
                   </CardActionArea>
-                  <CardActions>
-                    <Button size="small" color="primary">
-                      Share
-                    </Button>
-                    <Button size="small" color="primary">
-                      Learn More
-                    </Button>
-                  </CardActions>
                 </Card>
                 </Grid>
                 <Grid item sm={6} xs={12} md={4} lg={3}>
                 <Card className={classes.card}>
-                  <CardActionArea>
+                  <CardActionArea onClick={()=> window.location.assign('https://soggytoast111.github.io/giphyapi/')}>
                     <CardMedia
                       className={classes.rpg}
                       title="Giphy API"
@@ -205,19 +197,11 @@ function Page1() {
                       </Typography>
                     </CardContent>
                   </CardActionArea>
-                  <CardActions>
-                    <Button size="small" color="primary">
-                      Share
-                    </Button>
-                    <Button size="small" color="primary">
-                      Learn More
-                    </Button>
-                  </CardActions>
                 </Card>
                 </Grid>
                 <Grid item sm={6} xs={12} md={4} lg={3}>
                 <Card className={classes.card}>
-                  <CardActionArea>
+                  <CardActionArea onClick={()=> window.location.assign('https://salty-gorge-60362.herokuapp.com/')}>
                     <CardMedia
                       className={classes.media}
                       title="Ultra Dan Finder!"
@@ -233,19 +217,11 @@ function Page1() {
                       </Typography>
                     </CardContent>
                   </CardActionArea>
-                  <CardActions>
-                    <Button size="small" color="primary">
-                      Share
-                    </Button>
-                    <Button size="small" color="primary">
-                      Learn More
-                    </Button>
-                  </CardActions>
                 </Card>
                 </Grid>
                 <Grid item sm={6} xs={12} md={4} lg={3}>
                 <Card className={classes.card}>
-                  <CardActionArea>
+                  <CardActionArea onClick={()=> window.location.assign('https://gentle-tor-60024.herokuapp.com/')}>
                     <CardMedia
                       className={classes.burger}
                       title="Totally Tubular Trivia!"
@@ -260,14 +236,6 @@ function Page1() {
                       </Typography>
                     </CardContent>
                   </CardActionArea>
-                  <CardActions>
-                    <Button size="small" color="primary">
-                      Share
-                    </Button>
-                    <Button size="small" color="primary">
-                      Learn More
-                    </Button>
-                  </CardActions>
                 </Card>
                 </Grid>
 

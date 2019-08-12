@@ -19,7 +19,7 @@ import AssignmentIcon from '@material-ui/icons/Assignment';
 import HomeIcon from '@material-ui/icons/Home';
 import DeviceIcon from '@material-ui/icons/Devices';
 import { sizing } from '@material-ui/system';
-import { BrowserRouter as Router, Route, Switch, NavLink as RouterLink, Redirect} from "react-router-dom";
+import { HashRouter as Router, Route, Switch, NavLink as RouterLink, Redirect} from "react-router-dom";
 import Page1 from './pages/page1.js'
 import Page2 from './pages/page2.js'
 import Page3 from './pages/page3.js'
@@ -67,7 +67,7 @@ const useStyles = makeStyles(theme => ({
     flexGrow: 1,
   },
   title2: {
-    flexGrow: 99,
+    flexGrow: 10,
   },
   drawerPaper: {
     position: 'relative',
@@ -145,8 +145,8 @@ function Dashboard() {
           </IconButton>
           <Typography align="right" component="h1" variant="h6" color="inherit" noWrap className={classes.title2}>
           <div className={classes.contactbox}>
-            <a href="#" className="fa fa-facebook"></a>
-            <a href="#" className="fa fab fa-linkedin"></a>
+            <a href="https://www.facebook.com/jonathancurto" className="fa fa-facebook"></a>
+            <a href="https://www.linkedin.com/in/jon-curto-7730a017b" className="fa fab fa-linkedin"></a>
           </div>
           </Typography>
           <Typography align="right" component="h1" variant="h6" color="inherit" noWrap className={classes.title}>
