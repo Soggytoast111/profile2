@@ -106,11 +106,7 @@ import { relative } from 'path';
 function MadeWithLove() {
     return (
       <Typography variant="body2" color="textSecondary" align="center">
-        {'Built with love by the '}
-        <Link color="inherit" href="https://material-ui.com/">
-          Material-UI
-        </Link>
-        {' team.'}
+        {'2019'}
       </Typography>
     );
   }

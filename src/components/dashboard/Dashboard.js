@@ -67,7 +67,7 @@ const useStyles = makeStyles(theme => ({
     flexGrow: 1,
   },
   title2: {
-    flexGrow: 10,
+    flexGrow: 5,
   },
   drawerPaper: {
     position: 'relative',
@@ -143,6 +143,7 @@ function Dashboard() {
           >
             <MenuIcon />
           </IconButton>
+          <Typography align='left' component="caption" variant="h6" color="inherit">MENU</Typography>
           <Typography align="right" component="h1" variant="h6" color="inherit" noWrap className={classes.title2}>
           <div className={classes.contactbox}>
             <a href="https://www.facebook.com/jonathancurto" className="fa fa-facebook"></a>
