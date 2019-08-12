@@ -1,0 +1,19 @@
+#rock:hover {
+    background-image: url(../../../assets/img/rock.gif);
+}
+
+#RPG:hover {
+    background-image: url(../../../assets/img/RPG.gif);
+}
+
+#burger:hover {
+    background-image: url(../../../assets/img/burger.gif);
+}
+
+#tubtrivia:hover {
+    background-image: url(../../../assets/img/tubtrivia.gif);
+}
+
+#reddit:hover {
+    background-image: url(../../../assets/img/reddit.gif);
+}

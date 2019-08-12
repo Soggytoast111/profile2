@@ -5,7 +5,14 @@ import Paper from '@material-ui/core/Paper';
 import Link from '@material-ui/core/Link';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
+import Card from '@material-ui/core/Card';
+import CardActionArea from '@material-ui/core/CardActionArea';
+import CardActions from '@material-ui/core/CardActions';
+import CardContent from '@material-ui/core/CardContent';
+import CardMedia from '@material-ui/core/CardMedia';
+import Button from '@material-ui/core/Button';
 import Background from '../../../assets/img/bg.jpg'
+import './page3.css'
 
 const drawerWidth = 240;
 
@@ -95,6 +102,36 @@ const divStyle = {
     fixedHeight: {
       height: 240,
     },
+    card: {
+      maxWidth: 345,
+    },
+    media: {
+      height: 140,
+    },
+    rock: {
+      height: 140,
+      "background-image": "url(assets/img/rock.png)"
+    },
+    rpg: {
+      height: 140,
+      "background-image": "url(assets/img/rpgframe.png)"
+    },
+    burger: {
+      height: 140,
+      "background-image": "url(assets/img/burger.png)"
+    },
+    tubtrivia: {
+      height: 140,
+      "background-image": "url(assets/img/tubtrivia.png)"
+    },
+    reddit: {
+      height: 140,
+      "background-image": "url(assets/img/reddit.png)"
+    },
+    bach: {
+      height: 140,
+      "background-image": "url(assets/img/bach.png)"
+    }
   }));
 
 
@@ -122,7 +159,119 @@ function Page1() {
           <Grid container spacing={3}>
             <Grid item xs={12}>
               <Paper className={classes.paper}>
-                <div style={divStyle}>THis is my test div3</div>
+              <Grid container spacing={3}>
+                <Grid item sm={6} xs={12} md={4} lg={3}>
+                <Card className={classes.card}>
+                  <CardActionArea>
+                    <CardMedia
+                      className={classes.rock}
+                      title="Multiplayer RPS"
+                      id="rock"
+                    />
+                    <CardContent>
+                      <Typography gutterBottom variant="h5" component="h2">
+                        Multiplayer RPS
+                      </Typography>
+                      <Typography variant="body2" color="textSecondary" component="p">
+                      A Multiplayer Rock, Paper, Scissors game that uses Firebase to track player data.
+                      </Typography>
+                    </CardContent>
+                  </CardActionArea>
+                  <CardActions>
+                    <Button size="small" color="primary">
+                      Share
+                    </Button>
+                    <Button size="small" color="primary">
+                      Learn More
+                    </Button>
+                  </CardActions>
+                </Card>
+                </Grid>
+                <Grid item sm={6} xs={12} md={4} lg={3}>
+                <Card className={classes.card}>
+                  <CardActionArea>
+                    <CardMedia
+                      className={classes.rpg}
+                      title="Giphy API"
+                      id="Giphy"
+                      image="assets/img/image5.jpg"
+                    />
+                    <CardContent>
+                      <Typography gutterBottom variant="h5" component="h2">
+                        Giphy Search
+                      </Typography>
+                      <Typography variant="body2" color="textSecondary" component="p">
+                      A little app that queries the giphy.com API and displays search results on screen.  An exercise to build some experience with .ajax and get requests. 
+                      </Typography>
+                    </CardContent>
+                  </CardActionArea>
+                  <CardActions>
+                    <Button size="small" color="primary">
+                      Share
+                    </Button>
+                    <Button size="small" color="primary">
+                      Learn More
+                    </Button>
+                  </CardActions>
+                </Card>
+                </Grid>
+                <Grid item sm={6} xs={12} md={4} lg={3}>
+                <Card className={classes.card}>
+                  <CardActionArea>
+                    <CardMedia
+                      className={classes.media}
+                      title="Ultra Dan Finder!"
+                      id="trivia"
+                      image="assets/img/image10.jpg"
+                    />
+                    <CardContent>
+                      <Typography gutterBottom variant="h5" component="h2">
+                        Ultra Dan Finder!
+                      </Typography>
+                      <Typography variant="body2" color="textSecondary" component="p">
+                     A mock up of a friend-finder app - some more practice with node and express.  
+                      </Typography>
+                    </CardContent>
+                  </CardActionArea>
+                  <CardActions>
+                    <Button size="small" color="primary">
+                      Share
+                    </Button>
+                    <Button size="small" color="primary">
+                      Learn More
+                    </Button>
+                  </CardActions>
+                </Card>
+                </Grid>
+                <Grid item sm={6} xs={12} md={4} lg={3}>
+                <Card className={classes.card}>
+                  <CardActionArea>
+                    <CardMedia
+                      className={classes.burger}
+                      title="Totally Tubular Trivia!"
+                      id="burger"
+                    />
+                    <CardContent>
+                      <Typography gutterBottom variant="h5" component="h2">
+                        Burger Time!
+                      </Typography>
+                      <Typography variant="body2" color="textSecondary" component="p">
+                      A little nonsense app that was mostly an exercise in integrating SQL, Express, and Handlebars into seemless delivery of a user experience.
+                      </Typography>
+                    </CardContent>
+                  </CardActionArea>
+                  <CardActions>
+                    <Button size="small" color="primary">
+                      Share
+                    </Button>
+                    <Button size="small" color="primary">
+                      Learn More
+                    </Button>
+                  </CardActions>
+                </Card>
+                </Grid>
+
+                </Grid>
               </Paper>
             </Grid>
           </Grid>

@@ -12,6 +12,7 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Background from '../../../assets/img/bg.jpg'
+import './page2.css'
 
 const drawerWidth = 240;
 
@@ -107,6 +108,30 @@ const divStyle = {
     media: {
       height: 140,
     },
+    sf: {
+      height: 140,
+      "background-image": "url(assets/img/sfframe.png)"
+    },
+    rpg: {
+      height: 140,
+      "background-image": "url(assets/img/rpgframe.png)"
+    },
+    trivia: {
+      height: 140,
+      "background-image": "url(assets/img/trivia.png)"
+    },
+    tubtrivia: {
+      height: 140,
+      "background-image": "url(assets/img/tubtrivia.png)"
+    },
+    reddit: {
+      height: 140,
+      "background-image": "url(assets/img/reddit.png)"
+    },
+    bach: {
+      height: 140,
+      "background-image": "url(assets/img/bach.png)"
+    }
   }));
 
 
@@ -139,9 +164,9 @@ function Page1() {
                 <Card className={classes.card}>
                   <CardActionArea>
                     <CardMedia
-                      className={classes.media}
-                      image="/static/images/cards/contemplative-reptile.jpg"
+                      className={classes.sf}
                       title="Street Fighter Hangman"
+                      id="sf1337"
                     />
                     <CardContent>
                       <Typography gutterBottom variant="h5" component="h2">
@@ -166,9 +191,9 @@ function Page1() {
                 <Card className={classes.card}>
                   <CardActionArea>
                     <CardMedia
-                      className={classes.media}
-                      image="/static/images/cards/contemplative-reptile.jpg"
+                      className={classes.rpg}
                       title="JQuery RPG"
+                      id="RPG"
                     />
                     <CardContent>
                       <Typography gutterBottom variant="h5" component="h2">
@@ -193,9 +218,9 @@ function Page1() {
                 <Card className={classes.card}>
                   <CardActionArea>
                     <CardMedia
-                      className={classes.media}
-                      image="/static/images/cards/contemplative-reptile.jpg"
+                      className={classes.trivia}
                       title="Lighthouse Trivia!"
+                      id="trivia"
                     />
                     <CardContent>
                       <Typography gutterBottom variant="h5" component="h2">
@@ -220,17 +245,16 @@ function Page1() {
                 <Card className={classes.card}>
                   <CardActionArea>
                     <CardMedia
-                      className={classes.media}
-                      image="/static/images/cards/contemplative-reptile.jpg"
-                      title="Contemplative Reptile"
+                      className={classes.tubtrivia}
+                      title="Totally Tubular Trivia!"
+                      id="tubtrivia"
                     />
                     <CardContent>
                       <Typography gutterBottom variant="h5" component="h2">
-                        Lizard
+                        Totally Tubular Trivia!
                       </Typography>
                       <Typography variant="body2" color="textSecondary" component="p">
-                        Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-                        across all continents except Antarctica
+                      Totally Tubular Trivia is a multiplayer trivia game that incorporates Node.js, Handlebars, and Sequelize.  Trivia Questions are pulled in from an open trivia API and the game logic is controled on the front-end.  The back-end logic handles how user info is stored in the database and manages game instances.
                       </Typography>
                     </CardContent>
                   </CardActionArea>
@@ -248,17 +272,16 @@ function Page1() {
                 <Card className={classes.card}>
                   <CardActionArea>
                     <CardMedia
-                      className={classes.media}
-                      image="/static/images/cards/contemplative-reptile.jpg"
-                      title="Contemplative Reptile"
+                      className={classes.reddit}
+                      title="Reddit User History Scraper"
+                      id="reddit"
                     />
                     <CardContent>
                       <Typography gutterBottom variant="h5" component="h2">
-                        Lizard
+                        Reddit User History Scraper
                       </Typography>
                       <Typography variant="body2" color="textSecondary" component="p">
-                        Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-                        across all continents except Antarctica
+                      Reddit User History Scraper is a utility that allows an annonymous user to fetch any reddit.com user's post history to be displayed, searched and sorted all on one page.  Built with MongoDB (Mongoose), Node.js, and Handlebars.
                       </Typography>
                     </CardContent>
                   </CardActionArea>
@@ -276,44 +299,16 @@ function Page1() {
                 <Card className={classes.card}>
                   <CardActionArea>
                     <CardMedia
-                      className={classes.media}
-                      image="/static/images/cards/contemplative-reptile.jpg"
-                      title="Contemplative Reptile"
+                      className={classes.bach}
+                      title="Bach to Basics"
+                      id="bach"
                     />
                     <CardContent>
                       <Typography gutterBottom variant="h5" component="h2">
-                        Lizard
+                        Bach to Basics
                       </Typography>
                       <Typography variant="body2" color="textSecondary" component="p">
-                        Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-                        across all continents except Antarctica
-                      </Typography>
-                    </CardContent>
-                  </CardActionArea>
-                  <CardActions>
-                    <Button size="small" color="primary">
-                      Share
-                    </Button>
-                    <Button size="small" color="primary">
-                      Learn More
-                    </Button>
-                  </CardActions>
-                </Card>
-                </Grid>
-                <Grid item sm={6} xs={12} md={4} lg={3}>
-                <Card className={classes.card}>
-                  <CardActionArea>
-                    <CardMedia
-                      className={classes.media}
-                      image="/static/images/cards/contemplative-reptile.jpg"
-                      title="Street Fighter Hangman"
-                    />
-                    <CardContent>
-                      <Typography gutterBottom variant="h5" component="h2">
-                        Lizard
-                      </Typography>
-                      <Typography variant="body2" color="textSecondary" component="p">
-                      My first exploration into Javascript.  The game uses it logic to track button presses, word bank, score, etc.  And of course - it's Street Fighter themed!
+                      Bach to the Basics is a musical sandbox where users can compose/save songs and practice scales.  Noteflight API is incorporated into the Compose page and allows the user to export MIDI files of created music.
                       </Typography>
                     </CardContent>
                   </CardActionArea>

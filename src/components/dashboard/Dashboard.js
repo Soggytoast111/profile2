@@ -16,12 +16,15 @@ import Link from '@material-ui/core/Link'
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import AssignmentIcon from '@material-ui/icons/Assignment';
+import HomeIcon from '@material-ui/icons/Home';
+import DeviceIcon from '@material-ui/icons/Devices';
+import { sizing } from '@material-ui/system';
 import { BrowserRouter as Router, Route, Switch, NavLink as RouterLink, Redirect} from "react-router-dom";
 import Page1 from './pages/page1.js'
 import Page2 from './pages/page2.js'
 import Page3 from './pages/page3.js'
 import Page4 from './pages/page4.js'
-import Page5 from './pages/page5.js'
+import './pages/page4.css'
 
 const drawerWidth = 240;
 
@@ -62,6 +65,9 @@ const useStyles = makeStyles(theme => ({
   },
   title: {
     flexGrow: 1,
+  },
+  title2: {
+    flexGrow: 99,
   },
   drawerPaper: {
     position: 'relative',
@@ -137,6 +143,12 @@ function Dashboard() {
           >
             <MenuIcon />
           </IconButton>
+          <Typography align="right" component="h1" variant="h6" color="inherit" noWrap className={classes.title2}>
+          <div className={classes.contactbox}>
+            <a href="#" className="fa fa-facebook"></a>
+            <a href="#" className="fa fab fa-linkedin"></a>
+          </div>
+          </Typography>
           <Typography align="right" component="h1" variant="h6" color="inherit" noWrap className={classes.title}>
             Jonathan Curto
             <Typography style={{ fontSize: '10px' }} align="right" component="h6" variant="body2" color="inherit" noWrap className={classes.title}>
@@ -161,7 +173,7 @@ function Dashboard() {
         <List>
           <div>
             <ListItem component='div'>
-              <div><img src='assets/img/me.jpg' height='195' width='175'></img></div>
+              <div><img className='headshot' src='assets/img/bwhead2.jpg' height='252' width='189'></img></div>
             </ListItem>
           </div>
         </List>
@@ -171,7 +183,7 @@ function Dashboard() {
           <Link>
           <ListItem id="homeButton" component={RouterLink} to='/' onClick={handleClick} button>
             <ListItemIcon>
-              <AssignmentIcon />
+              <HomeIcon />
             </ListItemIcon>
             <ListItemText primary="Home" />
           </ListItem>
@@ -179,7 +191,7 @@ function Dashboard() {
           <Link>
           <ListItem id="projectsButton" component={RouterLink} to='/page2' onClick={handleClick} button>
             <ListItemIcon>
-              <AssignmentIcon />
+              <DeviceIcon />
             </ListItemIcon>
             <ListItemText primary="Projects" />
           </ListItem>
@@ -190,14 +202,6 @@ function Dashboard() {
               <AssignmentIcon />
             </ListItemIcon>
             <ListItemText primary="Exercises/Doodles" />
-          </ListItem>
-          </Link>
-          <Link>
-          <ListItem id="contactButton" component={RouterLink} to='/page4' onClick={handleClick} button>
-            <ListItemIcon>
-              <AssignmentIcon />
-            </ListItemIcon>
-            <ListItemText primary="Contact Info" />
           </ListItem>
           </Link>
         </div>
