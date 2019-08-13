@@ -188,7 +188,7 @@
   font-size: 8px;
   float: left;
   position: relative;
-  left: 150px;
+  left: 130px;
   width: 300px;
 }
 
@@ -207,7 +207,7 @@
 }
 
 .makeStyles-container-132 {
-  height: 350px;
+  height: 350px !important;
   width: 350px;
 }
 
